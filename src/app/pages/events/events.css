@@ -1,0 +1,4 @@
+.list { list-style: none; padding: 0; display: grid; gap: 1rem; }
+.item { display: flex; gap: 1.2rem; align-items: center; }
+.date { flex: none; width: 64px; text-align: center; background: var(--ink); color: var(--white); border-radius: var(--radius); padding: .5rem 0; font-size: .85rem; }
+.date b { display: block; font-family: var(--font-head); font-size: 1.6rem; line-height: 1; }

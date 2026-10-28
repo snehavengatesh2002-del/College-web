@@ -1,0 +1,56 @@
+<section class="hero">
+  <div class="container hero-inner">
+    <div class="hero-copy">
+      <span class="eyebrow">Transforming lives through learning</span>
+      <h1>Empowering Minds. Shaping Futures.</h1>
+      <p>Join a vibrant campus where students discover their purpose, develop career-ready skills, and grow with confidence. OXFORD College blends academic excellence, mentorship, and real-world opportunity.</p>
+      <div class="actions">
+        <a routerLink="/contact" class="btn">Start Your Application</a>
+        <a routerLink="/departments" class="btn ghost">Browse departments</a>
+      </div>
+      <ul class="stats" aria-label="college statistics">
+        <li><strong>25+</strong><span>Years of excellence</span></li>
+        <li><strong>6K+</strong><span>Students mentored</span></li>
+        <li><strong>92%</strong><span>Placement success</span></li>
+      </ul>
+    </div>
+
+    <div class="hero-visual" aria-label="College campus image">
+      <img src="images/Home.jpg" alt="Oxford College campus with campus buildings and green lawns" />
+    </div>
+  </div>
+</section>
+
+<section class="section container">
+  <div class="section-head">
+    <div>
+      <span class="eyebrow dark">Popular programs</span>
+      <h2>Academic pathways built for ambition</h2>
+    </div>
+  </div>
+  <div class="grid">
+    @for (p of programs; track p.name) {
+      <article class="card feature-card">
+        <span class="mini-tag">{{ p.level }}</span>
+        <h3>{{ p.name }}</h3>
+        <p>{{ p.blurb }}</p>
+      </article>
+    }
+  </div>
+</section>
+
+<section class="section notice-wrap">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow dark">Campus updates</span>
+        <h2>Notice board</h2>
+      </div>
+    </div>
+    <ul class="notices">
+      @for (n of notices; track n.text) {
+        <li><span class="tag">{{ n.date }}</span> {{ n.text }}</li>
+      }
+    </ul>
+  </div>
+</section>

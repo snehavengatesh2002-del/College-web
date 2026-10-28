@@ -1,0 +1,14 @@
+<div class="page-head"><div class="container">
+  <h1>About us</h1>
+  <p>A college focused on small classes, practical learning and good teachers.</p>
+</div></div>
+<section class="section container">
+  <h2>Our mission</h2>
+  <p class="lead">To give every student a strong academic base and the confidence to use it, in work, further study and community life.</p>
+  <div class="grid">
+    @for (f of facts; track f.title) {
+      <article class="card"><h3>{{ f.title }}</h3><p>{{ f.text }}</p></article>
+    }
+  </div>
+</section>
+

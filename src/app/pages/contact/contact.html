@@ -1,0 +1,32 @@
+<div class="page-head"><div class="container">
+  <h1>Contact</h1>
+  <p>Ask about admissions, fees or visiting the campus.</p>
+</div></div>
+<section class="section container layout">
+  <form #f="ngForm" (ngSubmit)="f.valid && submit()" novalidate>
+    <label>Name
+      <input name="name" [(ngModel)]="model.name" required #name="ngModel">
+      @if (name.invalid && (name.touched || f.submitted)) { <small>Enter your name.</small> }
+    </label>
+    <label>Email
+      <input type="email" name="email" [(ngModel)]="model.email" required email #email="ngModel">
+      @if (email.invalid && (email.touched || f.submitted)) { <small>Enter a valid email address.</small> }
+    </label>
+    <label>Phone (optional)
+      <input type="tel" name="phone" [(ngModel)]="model.phone">
+    </label>
+    <label>Message
+      <textarea name="message" rows="5" [(ngModel)]="model.message" required #msg="ngModel"></textarea>
+      @if (msg.invalid && (msg.touched || f.submitted)) { <small>Write a short message.</small> }
+    </label>
+    <button class="btn" type="submit">Send message</button>
+    @if (sent()) { <p class="ok" role="status">Message sent. We will reply within two working days.</p> }
+  </form>
+
+  <aside class="card">
+    <h3>Visit us</h3>
+    <p>12 College Road, Bengaluru, Karnataka</p>
+    <p>Mon&ndash;Sat, 9:00 AM &ndash; 4:30 PM</p>
+    <p>office&#64;oxford.edu<br>+91 80 0000 0000</p>
+  </aside>
+</section>

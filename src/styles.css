@@ -1,3 +1,42 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --ink: #183b3b;
+  --paper: #f7f5f0;
+  --white: #ffffff;
+  --saffron: #f2ae3d;
+  --saffron-deep: #cf8d14;
+  --muted: #536a66;
+  --line: #dfe7e3;
+  --shadow: rgba(16, 49, 43, 0.12);
+  --radius: 18px;
+  --font-head: 'Bricolage Grotesque', Georgia, serif;
+  --font-body: 'Public Sans', system-ui, sans-serif;
+}
+* { box-sizing: border-box; margin: 0; }
+body { font-family: var(--font-body); background: linear-gradient(180deg, #f8faf8 0%, #f2f7f5 100%); color: var(--ink); line-height: 1.6; }
+h1, h2, h3 { font-family: var(--font-head); line-height: 1.12; letter-spacing: -0.02em; }
+a { color: inherit; }
+img { max-width: 100%; display: block; }
+:focus-visible { outline: 3px solid var(--saffron); outline-offset: 2px; }
 
-@import 'tailwindcss';
+.container { width: min(1100px, 100% - 2rem); margin-inline: auto; }
+.section { padding: 3.5rem 0; }
+.page-head { background: linear-gradient(135deg, #ebf2ef 0%, #fdf4df 100%); color: var(--ink); padding: 3rem 0; border-bottom: 1px solid var(--line); }
+.page-head.about       { background: linear-gradient(135deg, #edf3ff 0%, #e8f4f2 100%); }
+.page-head.departments { background: linear-gradient(135deg, #fff7e8 0%, #f7efe4 100%); }
+.page-head.faculty     { background: linear-gradient(135deg, #f5edff 0%, #edf7f5 100%); }
+.page-head.events      { background: linear-gradient(135deg, #fff1ec 0%, #f7f0ff 100%); }
+.page-head.gallery     { background: linear-gradient(135deg, #eaf8ff 0%, #eef5e5 100%); }
+.page-head.contact     { background: linear-gradient(135deg, #eef9ea 0%, #f9efe3 100%); }
+.page-head h1 { font-size: clamp(2rem, 5vw, 3.2rem); }
+.page-head p { max-width: 60ch; margin-top: .75rem; color: var(--muted);}
+.lead { max-width: 65ch; font-size: 1.1rem; color: var(--muted); }
+
+.grid { display: grid; gap: 1.25rem; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); margin-top: 2rem; }
+.card { background: var(--white); border: 1px solid var(--line); border-radius: var(--radius); padding: 1.25rem; box-shadow: 0 10px 30px rgba(16, 49, 43, 0.04); }
+.card h3 { font-size: 1.2rem; margin-bottom: .4rem; }
+.card p { color: var(--muted); font-size: .95rem; }
+.tag { display: inline-block; font-size: .8rem; font-weight: 700; background: linear-gradient(135deg, var(--saffron), #ffd98c); color: var(--ink); padding: .2rem .7rem; border-radius: 99px; margin-bottom: .6rem; }
+
+.btn { display: inline-block; background: linear-gradient(135deg, var(--saffron), #f9c75b); color: var(--ink); font-weight: 700; padding: .8rem 1.5rem; border: 0; border-radius: 999px; text-decoration: none; cursor: pointer; font: inherit; box-shadow: 0 10px 24px rgba(242, 174, 61, 0.3); }
+.btn:hover { filter: brightness(.97); transform: translateY(-1px); }
+.btn.ghost { background: transparent; color: var(--ink); border: 1px solid rgba(24, 59, 59, 0.2); box-shadow: none; }

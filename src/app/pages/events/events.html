@@ -1,0 +1,14 @@
+<div class="page-head"><div class="container">
+  <h1>Events</h1>
+  <p>What is coming up on campus.</p>
+</div></div>
+<section class="section container">
+  <ul class="list">
+    @for (e of events; track e.title) {
+      <li class="card item">
+        <time class="date"><b>{{ e.day }}</b>{{ e.month }}</time>
+        <div><h3>{{ e.title }}</h3><p>{{ e.time }} &middot; {{ e.place }}</p></div>
+      </li>
+    }
+  </ul>
+</section>

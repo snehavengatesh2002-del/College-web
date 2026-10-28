@@ -1,0 +1,4 @@
+.tile { height: 180px; border: 0; border-radius: var(--radius); cursor: pointer; display: flex; align-items: flex-end; padding: .8rem; color: var(--white); font: inherit; font-weight: 600; text-align: left; }
+.tile:hover { filter: brightness(1.1); }
+.overlay { position: fixed; inset: 0; background: rgba(0,0,0,.8); display: grid; place-items: center; align-content: center; gap: 1rem; z-index: 20; }
+.big { width: min(800px, 90vw); height: min(500px, 60vh); border-radius: var(--radius); display: flex; align-items: flex-end; padding: 1.2rem; color: var(--white); font-family: var(--font-head); font-size: 1.6rem; }

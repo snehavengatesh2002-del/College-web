@@ -1,0 +1,10 @@
+.hero { background: #e3efec; color: var(--ink); padding: 5rem 0 4.5rem; border-bottom: 1px solid var(--line); }
+.hero h1 { font-size: clamp(2.4rem, 7vw, 4.4rem); max-width: 14ch; }
+.hero p { max-width: 55ch; margin: 1.2rem 0 2rem; color: var(--muted); font-size: 1.15rem; }
+.actions { display: flex; gap: .8rem; flex-wrap: wrap; }
+.hero .btn.ghost { color: var(--ink); border-color: var(--ink); }
+.hero .btn.ghost:hover { background: var(--white); }
+
+.notices { list-style: none; padding: 0; margin-top: 1.2rem; display: grid; gap: .6rem; }
+.notices li { background: var(--white); border: 1px solid var(--line); border-radius: var(--radius); padding: .8rem 1rem; }
+.notices .tag { margin: 0 .6rem 0 0; }

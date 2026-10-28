@@ -1,0 +1,5 @@
+.filters { display: flex; gap: .5rem; flex-wrap: wrap; }
+.filters button { font: inherit; background: var(--white); border: 1px solid var(--line); padding: .4rem 1rem; border-radius: 99px; cursor: pointer; }
+.filters button.on { background: var(--ink); color: var(--white); border-color: var(--ink); }
+.person { display: flex; gap: 1rem; align-items: center; }
+.avatar { width: 52px; height: 52px; flex: none; border-radius: 50%; background: var(--saffron); display: grid; place-items: center; font-family: var(--font-head); font-weight: 700; }

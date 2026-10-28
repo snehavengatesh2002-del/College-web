@@ -1,0 +1,19 @@
+<div class="page-head"><div class="container">
+  <h1>Faculty</h1>
+  <p>Our teachers bring classroom and industry experience.</p>
+</div></div>
+<section class="section container">
+  <div class="filters" role="group" aria-label="Filter by department">
+    @for (d of depts; track d) {
+      <button type="button" [class.on]="filter() === d" (click)="filter.set(d)">{{ d }}</button>
+    }
+  </div>
+  <div class="grid">
+    @for (s of shown(); track s.name) {
+      <article class="card person">
+        <div class="avatar" aria-hidden="true">{{ initials(s.name) }}</div>
+        <div><h3>{{ s.name }}</h3><p>{{ s.role }}<br>{{ s.dept }}</p></div>
+      </article>
+    }
+  </div>
+</section>

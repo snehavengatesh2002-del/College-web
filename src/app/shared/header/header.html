@@ -1,0 +1,13 @@
+<header class="bar">
+  <div class="container inner">
+    <a routerLink="/" class="brand" (click)="close()">OXFORD College</a>
+    <button class="menu-btn" (click)="toggle()" [attr.aria-expanded]="open()" aria-controls="nav">
+      {{ open() ? 'Close' : 'Menu' }}
+    </button>
+    <nav id="nav" [class.open]="open()" aria-label="Main">
+      @for (l of links; track l.path) {
+        <a [routerLink]="l.path" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: l.path === '/' }" (click)="close()">{{ l.label }}</a>
+      }
+    </nav>
+  </div>
+</header>

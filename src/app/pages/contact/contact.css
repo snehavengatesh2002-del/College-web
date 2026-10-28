@@ -1,0 +1,7 @@
+.layout { display: grid; gap: 2rem; grid-template-columns: 2fr 1fr; align-items: start; }
+form { display: grid; gap: 1rem; }
+label { display: grid; gap: .3rem; font-weight: 500; }
+input, textarea { font: inherit; padding: .65rem .8rem; border: 1px solid var(--line); border-radius: var(--radius); background: var(--white); }
+small { color: #b3261e; }
+.ok { color: #1c6b3a; font-weight: 500; }
+@media (max-width: 800px) { .layout { grid-template-columns: 1fr; } }

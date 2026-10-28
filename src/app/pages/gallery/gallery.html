@@ -1,0 +1,18 @@
+<div class="page-head"><div class="container">
+  <h1>Gallery</h1>
+  <p>Moments from around the campus.</p>
+</div></div>
+<section class="section container">
+  <div class="grid">
+    @for (p of photos; track p.title; let i = $index) {
+      <button type="button" class="tile" [style.background]="bg(i)" (click)="selected.set(i)">{{ p.title }}</button>
+    }
+  </div>
+</section>
+
+@if (selected() !== null) {
+  <div class="overlay" (click)="selected.set(null)" role="dialog" aria-modal="true" aria-label="Photo preview">
+    <div class="big" [style.background]="bg(selected()!)">{{ photos[selected()!].title }}</div>
+    <button class="btn" type="button">Close</button>
+  </div>
+}

@@ -1,0 +1,13 @@
+.bar { position: sticky; top: 0; z-index: 10; background: var(--white); border-bottom: 1px solid var(--line); }
+.inner { display: flex; align-items: center; justify-content: space-between; min-height: 64px; flex-wrap: wrap; }
+.brand { font-family: var(--font-head); font-weight: 700; font-size: 1.3rem; text-decoration: none; }
+nav { display: flex; gap: .25rem; }
+nav a { text-decoration: none; padding: .5rem .8rem; border-radius: var(--radius); font-weight: 500; }
+nav a:hover { background: var(--paper); }
+nav a.active { box-shadow: inset 0 -3px 0 var(--saffron); }
+.menu-btn { display: none; font: inherit; background: none; border: 1px solid var(--line); padding: .4rem .9rem; border-radius: var(--radius); cursor: pointer; }
+@media (max-width: 800px) {
+  .menu-btn { display: block; }
+  nav { display: none; flex-direction: column; width: 100%; padding-bottom: .75rem; }
+  nav.open { display: flex; }
+}
